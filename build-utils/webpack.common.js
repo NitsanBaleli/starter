@@ -8,12 +8,9 @@ const config = {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.json$/, loader: 'file-loader?name=[path][name].[ext]' },
-      { test: /\.html$/, loader: 'raw-loader' },
+      { test: /\.html$/, loader: 'html-loader' },
       // inline base64 URLs for <=8k images, direct URLs for the rest
-      {
-        test: /\.(png|jpg|ico)$/,
-        loader: 'url-loader?limit=8192&name=i/i-[hash:10].[ext]',
-      },
+      { test: /\.(png|jpg|ico)$/, loader: 'url-loader?limit=8192&name=i/i-[hash:10].[ext]' },
     ],
   },
   resolve: {

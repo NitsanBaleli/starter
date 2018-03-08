@@ -1,6 +1,6 @@
 import angular from 'angular';
 import AppComponent from './app.component';
-
+import './app.scss';
 export default angular
   .module('app.main', [])
   .config($stateProvider => {

@@ -4,9 +4,11 @@ import ngAnimate from 'angular-animate';
 import ngSanitize from 'angular-sanitize';
 import Config from './config/config';
 import Common from './common/common';
+import Pages from './pages/pages';
 
 export default angular
-  .module('App', [uiRouter, ngSanitize, ngAnimate, Config.name, Common.name])
+  .module('App', [
+    uiRouter, ngSanitize, ngAnimate, Config.name, Common.name, Pages.name])
   .run($rootScope => {
     'ngInject';
     $rootScope.$on(

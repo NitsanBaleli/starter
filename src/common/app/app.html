@@ -1,2 +1,184 @@
-<h1>app</h1>
-<test></test>
+<div class="wrapper">
+  <div class="panel">
+
+    <div class="panel__header">
+      <div class="panel__header__title">Trip Information</div>
+      <div class="panel__header__subtitle">
+        You chose to visit 
+        <span class="subtitle--bold subtitle--primary-color">
+          17 attractions
+        </span>
+        in paris for a total of 
+        <span class="subtitle--bold subtitle--primary-color">
+            2 day
+        </span>
+        copy
+      </div>
+      <div class="panel__header__actions">
+        <div class="panel__header__actions__back">
+          <img src="./assets/back.png") alt="">
+          <span>
+            Back
+          </span>
+        </div>
+        <div class="panel__header__actions__cancel">
+          <span>
+            Close
+          </span>
+          <img src="./assets/close.png") alt="">
+        </div>
+      </div>
+
+    </div>
+
+    
+    <div class="panel__body">
+      <div class="panel__body__input-group">
+        <div class="input-wrapper" ng-click="$ctrl.toggleCalendar()" ng-class="{'calendar-open': $ctrl.calendarOpen}">
+
+          <div class="input start" ng-click="$ctrl.test()">
+
+            <div class="input__left">
+              <img src="./assets/start.png" alt="">
+              <span class="input__title">Start</span>
+            </div>
+            <span class="input__placeholder">mm/dd/yyyy</span>
+            <img src="./assets/carret.png" alt="">
+          </div>
+
+        </div>
+
+        <div class="input-wrapper" ng-click="$ctrl.toggleCalendar()" ng-class="{'calendar-open': $ctrl.calendarOpen}">
+
+            <div class="input return">
+  
+              <div class="input__left">
+                <img src="./assets/return.png" alt="">
+                <span class="input__title">Return</span>
+              </div>
+              <span class="input__placeholder">mm/dd/yyyy</span>
+              <img src="./assets/carret.png" alt="">
+            </div>
+  
+        </div>
+        <div class="input-wrapper">
+
+            <div class="input people">
+  
+              <div class="input__left">
+                <span class="input__title">People</span>
+              </div>
+              <div class="input__right">
+                <span class="input__placeholder">1</span>
+                <img src="./assets/carret.png" alt="">
+              </div>
+            </div>
+  
+        </div>
+        <!-- <pre>
+          {{$ctrl.state | json}}
+        </pre> -->
+        <div class="calendar" ng-show="$ctrl.calendarOpen">
+          <!-- <div class="arrow"></div> -->
+          <div class="calendar__header">
+            <img src="./assets/calendar-header-top.png" alt="">
+          </div>
+          <div class="calendar__body">
+            <div class="calendar__body__side calendar__body__left">
+                
+                <header>
+                    April 2016
+                  </header>
+                
+                  <ul class="weekdays">
+                    <li>
+                      <abbr title="S">Sun</abbr>
+                    </li>
+                    <li>
+                      <abbr title="M">Mon</abbr>
+                    </li>
+                    <li>
+                      <abbr title="T">Tue</abbr>
+                    </li>
+                    <li>
+                      <abbr title="W">Wed</abbr>
+                    </li>
+                    <li>
+                      <abbr title="T">Thu</abbr>
+                    </li>
+                    <li>
+                      <abbr title="F">Fri</abbr>
+                    </li>
+                    <li>
+                      <abbr title="S">Sat</abbr>
+                    </li>
+                  </ul>
+                
+                  <ul class="day-grid">
+                    <li ng-repeat="day in $ctrl.days" ng-click="$ctrl.chooseDay('start', day)" ng-class="{betweenDates: $ctrl.isBetweenDates('start', day), startDate: $ctrl.isStartDay('start', day), returnDate: $ctrl.isReturnDate('start', day)}"><span>{{day}}</span></li>
+                  </ul>
+              </div>
+
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              <span class="between-calendars"></span>
+              <div class="calendar__body__side calendar__body__right">
+                  <header>
+                      May 2016
+                    </header>
+                  
+                    <ul class="weekdays">
+                      <li>
+                        <abbr title="S">Sun</abbr>
+                      </li>
+                      <li>
+                        <abbr title="M">Mon</abbr>
+                      </li>
+                      <li>
+                        <abbr title="T">Tue</abbr>
+                      </li>
+                      <li>
+                        <abbr title="W">Wed</abbr>
+                      </li>
+                      <li>
+                        <abbr title="T">Thu</abbr>
+                      </li>
+                      <li>
+                        <abbr title="F">Fri</abbr>
+                      </li>
+                      <li>
+                        <abbr title="S">Sat</abbr>
+                      </li>
+                    </ul>
+                  
+                    <ul class="day-grid">
+                      <li ng-repeat="day in $ctrl.days" ng-click="$ctrl.chooseDay('return', day)" ng-class="{betweenDates: $ctrl.isBetweenDates('return', day), startDate: $ctrl.isStartDay('return', day), returnDate: $ctrl.isReturnDate('return', day)}"><span>{{day}}</span></li>
+                    </ul>
+              </div> 
+            </div> 
+            <div class="calendar__action">
+                <button class="calendar__action__button">
+                    APPLY
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel__action">
+        <button class="panel__action__button" ng-click="$ctrl.apply()">
+            Create trip plan
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,17 +1,10 @@
 import template from './app.html';
+import controller from './app.controller.js';
 
-
-class AppController {
-    constructor() {
-        'ngInject';
-        console.log('app');
-        
-    }
-}
 
 let AppComponent = {
-    template: template,
-    controller: AppController,
+    template,
+    controller,
     name: 'app'
 };
 
